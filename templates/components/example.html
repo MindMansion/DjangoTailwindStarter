@@ -1,0 +1,71 @@
+<div class="px-3 md:px-0 py-16">
+
+    <div class="min-h-[150px] my-24 grid grid-flow-col place-content-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+             width="12em" height="12em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+            <path d="M14.135 4H18.1v18.169a26.218 26.218 0 0 1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322c0-4 2.673-6.6 6.816-6.6a6.448 6.448 0 0 1 1.724.2V4zm0 9.142a3.992 3.992 0 0 0-1.337-.2c-2 0-3.163 1.223-3.163 3.366c0 2.087 1.107 3.239 3.138 3.239a9.355 9.355 0 0 0 1.362-.1v-6.3z"
+                  fill="#44b78b"></path>
+            <path d="M24.4 10.059v9.1c0 3.133-.235 4.639-.923 5.938A6.316 6.316 0 0 1 20.237 28l-3.678-1.733a5.708 5.708 0 0 0 3.141-2.629c.566-1.121.745-2.42.745-5.837v-7.742z"
+                  fill="#44b78b"></path>
+            <path fill="#44b78b" d="M20.441 4.02h3.964v4.028h-3.964z"></path>
+        </svg>
+        <span class="text-[80px] px-0 md:px-5 text-stone-500">&</span>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+             width="12em" height="12em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+            <path d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1zm-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1z"
+                  fill="#44a8b3"></path>
+        </svg>
+    </div>
+
+    <div class="text-center text-xl font-medium font-roboto text-prussianBlue dark:text-stone-100 pb-8 underline">
+        Programming Quotes
+    </div>
+
+    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 mb-20">
+        {% if moc_data %}
+            {% for moc in moc_data %}
+                <div class="
+                relative 
+                transition ease-in-out
+                hover:scale-105
+                bg-gradient-to-br 
+                from-rose-500 via-primary to-red-500 
+                p-0.5 rounded-md
+                ">
+                    <div class="h-full bg-white dark:bg-dark p-4 rounded-md text-stone-800 dark:text-stone-300">
+                        {{ moc.quote }}
+                        <p class="text-right w-full italic text-sm pt-2 text-stone-500">{{ moc.author }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+    </div>
+
+    <h1 class="text-center text-3xl font-semibold font-roboto text-prussianBlue dark:text-stone-100">
+        Getting started with Django and Tailwind css
+    </h1>
+
+    <p class="max-w-md mx-auto text-prussianBlue dark:text-stone-100 text-center pt-5">
+        Since the introduction of Just in Time Mode in Tailwind Css, using tailwind in Django has been exceptionally
+        easy and awesome! &#x1F60D; &#x1F497; &#x1F389;
+    </p>
+
+    <div class="max-w-2xl mx-auto flex flex-wrap justify-center mt-16 gap-x-7 gap-y-5">
+        <a href="https://tailwindcss.com" target="_blank"
+           class="w-full md:w-max px-6 py-2.5 rounded-md text-center bg-emerald-500/80 text-stone-100">
+            Django Documentation &#x2197;
+        </a>
+        <a href="https://www.djangoproject.com" target="_blank"
+           class="w-full md:w-max px-6 py-2.5 border rounded-md text-center
+           border-teal-500/80 shadow shadow-emerald-500/10 text-prussianBlue dark:text-stone-100">
+            Tailwind Documentation &#x2197;
+        </a>
+        <a href="/"
+           class="w-full md:w-max text-center px-16 py-2.5 border border-bitterSweet
+           rounded-md shadow shadow-bitterSweet/10 text-prussianBlue dark:text-stone-100">
+            Get Started &#x2197;
+        </a>
+    </div>
+
+</div>

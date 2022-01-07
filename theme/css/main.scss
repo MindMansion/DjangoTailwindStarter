@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-dark;
+  }
+}
+
+
+.header {
+  @apply h-[60px];
+
+  &-nav {
+    @apply h-full container mx-auto px-2 md:px-0 flex items-center gap-2 md:gap-8 border-b border-stone-300/60 dark:border-stone-700;
+
+    &-brand {
+      @apply text-xl flex items-center;
+    }
+
+    &-links {
+      @apply hidden text-sm h-full flex-1 md:flex items-center gap-6;
+    }
+
+    &-actions {
+      @apply flex gap-0 md:gap-3 items-center justify-end text-sm text-prussianBlue;
+    }
+
+  }
+}

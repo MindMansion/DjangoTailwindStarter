@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#908f9e"/>
+    <meta name="theme-color" content="#908f9e"/>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <title>Django Tailwind Starter</title>
+</head>
+<body>
+
+<div class="flex flex-col min-h-screen">
+    {% include 'components/header.html' %}
+    <main class="flex-1 container mx-auto my-10">
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'components/footer.html' %}
+</div>
+    {% include 'components/script-tags.html' %}
+</body>
+</html>
