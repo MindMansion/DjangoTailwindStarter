@@ -31,11 +31,10 @@ A simple starter kit for integrating TailwindCss in Django
     npm install
     npm run build
     npm run watch # to keep the scss watcher alive 
-    
-    cd ..
 ```
 
-### 5. Run
+### 5. Runserver
+from a new terminal window run:
 ```bash
     python3 manage.py runserver
 ```
@@ -55,8 +54,15 @@ including tailwind in your project, follow these steps.
 ```
 
 ### 2. clone the tailwind setup folder
+This will add a `global.css` file to your `static` directory.
 ```bash
     npx degit https://github.com/MindMansion/DjangoTailwindStarter/theme
     npm run build
     npm run watch
+```
+
+### 3. CSS file
+Add the CSS file to your head tag
+```html
+    link rel="stylesheet" href="{% static 'css/global.css' %}">
 ```
