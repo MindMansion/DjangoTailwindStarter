@@ -57,6 +57,7 @@ including tailwind in your project, follow these steps.
 This will add a `global.css` file to your `static` directory.
 ```bash
     npx degit https://github.com/MindMansion/DjangoTailwindStarter/theme
+    npm install
     npm run build
     npm run watch
 ```
